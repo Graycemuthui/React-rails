@@ -1,4 +1,4 @@
-const apiUrl = "http://127.0.0.1:3000/api/v1/greetings";
+const apiUrl = "api/v1/greetings";
 
 const GREET_EVERYONE = "/greeting/GREET_EVERYONE";
 
