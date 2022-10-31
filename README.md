@@ -1,4 +1,7 @@
-> This is a simple hello rails react project which implement a connection between a Ruby on Rails back-end and React front-end.
+## React-rails
+
+This is a simple hello rails react project which implement a connection between a Ruby on Rails back-end and React front-end.
+
 > Things you may want to cover:
 
 Ruby version Version 3.1.2
