@@ -1,15 +1,17 @@
-import React from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Greeting from "./Greeting";
+import React, { useEffect } from "react";
+import { fetchGreeting } from "./redux/greeting";
+import { useSelector, useDispatch } from "react-redux";
 
-function App() {
+export default function Greeting() {
+  const greeting = useSelector((state) => state.greeting);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchGreeting());
+  }, []);
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Greeting />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <h1>{greeting.message}</h1>
+    </div>
   );
 }
-
-export default App;
